@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="style.css">
+    <script src="/SearchString.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
@@ -53,9 +54,9 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <ul class="list-unstyled mb-0">
-                                    <li><a href="#">Harry Potter</a></li>
-                                    <li><a href="#">Alice in Wonderland</a></li>
-                                    <li><a href="#">Lord of the Rings</a></li>
+                                    <li><a href="#" onclick="loadBook('JekyllAndHyde.txt', 'Jakeyll and Hyde')">Jakyll and Hyde</a></li>
+                                    <li><a href="#" onclick="loadBook('AliceInWonderland.txt', 'Alice in Wonderland')">Alice in Wonderland</a></li>
+                                    <li><a href="#" onclick="loadBook('LOTR.txt','Lord of the Ring')">Lord of the Rings</a></li>
                                 </ul>
                             </div>
                                 
@@ -84,9 +85,9 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <ul class="list-unstyled mb-0" id="leastUsed">
-                                    <li id="docLength"></li>
-                                    <li id="wordCount"></li>
-                                    <li id="charCount"></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
                                 </ul>
                             </div>
                         </div>
@@ -99,9 +100,9 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <ul class="list-unstyled mb-0" id="docStats">
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li id="docLength"></li>
+                                    <li id="wordCount"></li>
+                                    <li id="charCount"></li>
                                 </ul>
                             </div>
                         </div>
@@ -110,6 +111,12 @@
             </div>
           </div>
       </div>
+
+      <script id="template-ul-items" type="text/template">
+        <li>
+            {{val}}
+        </li>
+    </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
